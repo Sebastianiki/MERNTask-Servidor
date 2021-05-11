@@ -10,7 +10,7 @@ app.use(cors())
 
 app.use(express.json({ extend: true }))
 
-const port = process.env.port || 4001
+const port = process.env.PORT || 4001
 
 app.use('/api/usuarios', require('./routes/usuarios'))
 app.use('/api/auth', require('./routes/auth'))
