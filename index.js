@@ -6,7 +6,8 @@ const app = express()
 
 connectDB()
 
-app.use(cors())
+app.use(cors({ credentials: true, origin: true }));
+app.options("*", cors());   
 
 app.use(express.json({ extend: true }))
 
